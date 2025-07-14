@@ -1,0 +1,22 @@
+<div class="column-layout group">
+  <igx-list class="list">
+    @for (item of northwindSwaggerCustomerDto; track item) {
+      <igx-list-item (click)="clickListItem(item)">
+        <span igxListThumbnail>
+          <igx-avatar shape="circle" class="avatar">
+            <igx-icon>
+              person
+            </igx-icon>
+          </igx-avatar>
+        </span>
+        <span igxListLineTitle>{{ item.customerId }}</span>
+        <span igxListLineSubTitle>{{ item.companyName }}</span>
+        <span igxListAction>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+    }
+  </igx-list>
+</div>
